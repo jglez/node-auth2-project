@@ -1,6 +1,7 @@
 const db = require('../../data/db-config.js');
 
 function find() {
+  return db('users')
   /**
     You will need to join two tables.
     Resolves to an ARRAY with all users.
@@ -37,6 +38,7 @@ function findBy(filter) {
 }
 
 function findById(user_id) {
+  return db('users').where('user_id', user_id)
   /**
     You will need to join two tables.
     Resolves to the user with the given user_id.
